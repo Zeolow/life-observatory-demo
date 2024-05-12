@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://dt8nq6goapgj"]
+
+[ext_resource type="Shader" path="res://shaders/gradient_color_alpha.gdshader" id="1_d8xdk"]
+[ext_resource type="Texture2D" uid="uid://bbc7e8ce8njyv" path="res://scenes/block_visual_objects/sheep_sheep.png" id="2_nftkw"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_d8xdk")
+shader_parameter/color_1 = Color(0.717647, 0.717647, 0.717647, 1)
+shader_parameter/color_2 = Color(0.870588, 0.870588, 0.870588, 1)
+shader_parameter/alpha_scissor = null
+shader_parameter/bottom_gradient = false
+shader_parameter/billboard = false
+shader_parameter/tex = ExtResource("2_nftkw")

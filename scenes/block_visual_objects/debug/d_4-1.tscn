@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://kxau43o3uib5"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_pgv5y"]
+outer_radius = 1.4
+rings = 4
+ring_segments = 4
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lr0be"]
+albedo_color = Color(1, 0.145098, 0.607843, 1)
+
+[node name="VisualBlockDebug" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.707107, 1.60554e-24, 0.707107, 3.48787e-16, 1, -3.48787e-16, -0.707107, 4.93259e-16, 0.707107, 0, 0.455401, 0)
+mesh = SubResource("TorusMesh_pgv5y")
+surface_material_override/0 = SubResource("StandardMaterial3D_lr0be")

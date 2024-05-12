@@ -1,0 +1,14 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://byj5ect55cqnh"]
+
+[ext_resource type="Shader" path="res://shaders/gradient_color_alpha.gdshader" id="1_l2tgx"]
+[ext_resource type="Texture2D" uid="uid://b6hsecfy7mtdh" path="res://glb_models/pines_collected_pine_needle.png" id="2_xjkg0"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_l2tgx")
+shader_parameter/color_1 = Color(0.45098, 0.580392, 0.521569, 1)
+shader_parameter/color_2 = Color(0.760784, 0.717647, 0.564706, 1)
+shader_parameter/alpha_scissor = 0.6
+shader_parameter/bottom_gradient = true
+shader_parameter/billboard = false
+shader_parameter/tex = ExtResource("2_xjkg0")

@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://ba5ubkw5dmyyv"]
+
+[ext_resource type="Script" path="res://scripts/block.gd" id="1_s2g51"]
+[ext_resource type="Script" path="res://scripts/block_data.gd" id="2_glpg6"]
+[ext_resource type="PackedScene" uid="uid://dpcxuabhn64oq" path="res://scenes/block_visual_objects/debug/visual_block_debug.tscn" id="3_clrt1"]
+
+[sub_resource type="Resource" id="Resource_fce5r"]
+script = ExtResource("2_glpg6")
+item = ""
+visual_object = ExtResource("3_clrt1")
+co2 = 0.0
+kg_per_m2 = 0.0
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_v876p"]
+radius = 1.5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y3fh6"]
+shading_mode = 0
+albedo_color = Color(0.819608, 0.819608, 0.819608, 1)
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[sub_resource type="QuadMesh" id="QuadMesh_rpabo"]
+resource_local_to_scene = true
+material = SubResource("StandardMaterial3D_y3fh6")
+
+[node name="Block" type="Area3D"]
+script = ExtResource("1_s2g51")
+block_data = SubResource("Resource_fce5r")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_v876p")
+
+[node name="GlobeRepresentation" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("QuadMesh_rpabo")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]

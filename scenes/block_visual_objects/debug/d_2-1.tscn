@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://botu8t5q3l0b6"]
+
+[ext_resource type="Shader" path="res://shaders/wireframe.gdshader" id="1_866px"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_ek6pp"]
+size = Vector3(2, 1, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_80lpd"]
+albedo_color = Color(0.533333, 0, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_0bsts"]
+size = Vector3(2, 4, 2)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_80pgg"]
+render_priority = 0
+shader = ExtResource("1_866px")
+shader_parameter/color = Color(0.388235, 0.388235, 0.388235, 1)
+
+[node name="VisualBlockDebug" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.5, 2.08165e-12)
+mesh = SubResource("PrismMesh_ek6pp")
+surface_material_override/0 = SubResource("StandardMaterial3D_80lpd")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2, 2.08165e-12)
+mesh = SubResource("BoxMesh_0bsts")
+surface_material_override/0 = SubResource("ShaderMaterial_80pgg")

@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=3 uid="uid://1a4hn6g7i1l6"]
+
+[ext_resource type="Shader" path="res://scenes/block_visual_objects/unshaded_gradient.gdshader" id="1_1koyj"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_1koyj")
+shader_parameter/color_1 = Color(0.878431, 0.764706, 0.721569, 1)
+shader_parameter/color_2 = Color(0.6, 0.564706, 0.533333, 1)

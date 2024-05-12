@@ -1,0 +1,220 @@
+[gd_scene load_steps=14 format=3 uid="uid://dkt4njv265pvj"]
+
+[ext_resource type="Texture2D" uid="uid://cdi5011jjxgl6" path="res://textures/boundary_slider_1.png" id="2_jvrgd"]
+[ext_resource type="Shader" path="res://shaders/boundary_slider.gdshader" id="2_l3cvj"]
+[ext_resource type="Texture2D" uid="uid://bqiiuk10rn6yn" path="res://textures/300ppi/Resurs 2@300x.png" id="3_mtj7m"]
+
+[sub_resource type="Shader" id="Shader_mfxrq"]
+code = "shader_type canvas_item;
+
+uniform sampler2D tex;
+uniform float progress: hint_range(0.01, 1.0, 0.01);
+uniform vec4 color: source_color;
+
+void vertex() {
+	// Called for every vertex the material is visible on.
+}
+
+void fragment() {
+	float prog = texture(tex, UV).r;
+	prog = step(1.0- progress, prog);
+	
+	COLOR = prog * color;
+}
+
+void light() {
+	// Called for every pixel for every light affecting the CanvasItem.
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_b57se"]
+shader = SubResource("Shader_mfxrq")
+shader_parameter/progress = 0.14
+shader_parameter/color = Color(0.705882, 0.847059, 0.74902, 1)
+shader_parameter/tex = ExtResource("2_jvrgd")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_21t32"]
+shader = ExtResource("2_l3cvj")
+shader_parameter/progress = 0.62
+shader_parameter/color = Color(0.705882, 0.847059, 0.74902, 1)
+shader_parameter/tex = ExtResource("2_jvrgd")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_v84ys"]
+shader = SubResource("Shader_mfxrq")
+shader_parameter/progress = 0.22
+shader_parameter/color = Color(0.705882, 0.847059, 0.74902, 1)
+shader_parameter/tex = ExtResource("2_jvrgd")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_w821i"]
+shader = SubResource("Shader_mfxrq")
+shader_parameter/progress = 0.42
+shader_parameter/color = Color(0.705882, 0.847059, 0.74902, 1)
+shader_parameter/tex = ExtResource("2_jvrgd")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2s4up"]
+shader = SubResource("Shader_mfxrq")
+shader_parameter/progress = 0.42
+shader_parameter/color = Color(0.705882, 0.847059, 0.74902, 1)
+shader_parameter/tex = ExtResource("2_jvrgd")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_wpv0b"]
+shader = SubResource("Shader_mfxrq")
+shader_parameter/progress = 0.26
+shader_parameter/color = Color(0.705882, 0.847059, 0.74902, 1)
+shader_parameter/tex = ExtResource("2_jvrgd")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_delkh"]
+shader = SubResource("Shader_mfxrq")
+shader_parameter/progress = 0.28
+shader_parameter/color = Color(0.705882, 0.847059, 0.74902, 1)
+shader_parameter/tex = ExtResource("2_jvrgd")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8jidv"]
+shader = SubResource("Shader_mfxrq")
+shader_parameter/progress = 0.2
+shader_parameter/color = Color(0.705882, 0.847059, 0.74902, 1)
+shader_parameter/tex = ExtResource("2_jvrgd")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_f5aee"]
+shader = SubResource("Shader_mfxrq")
+shader_parameter/progress = 0.16
+shader_parameter/color = Color(0.705623, 0.84548, 0.7491, 1)
+shader_parameter/tex = ExtResource("2_jvrgd")
+
+[node name="BoundarySliders" type="Control"]
+custom_minimum_size = Vector2(350, 350)
+layout_mode = 3
+anchor_right = 0.267
+anchor_bottom = 0.474
+offset_right = -162.64
+offset_bottom = -161.92
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Slider1" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_b57se")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(175, 175)
+texture = ExtResource("2_jvrgd")
+expand_mode = 1
+
+[node name="Slider2" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_21t32")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.698132
+pivot_offset = Vector2(175, 175)
+texture = ExtResource("2_jvrgd")
+expand_mode = 1
+
+[node name="Slider3" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_v84ys")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 1.39626
+pivot_offset = Vector2(175, 175)
+texture = ExtResource("2_jvrgd")
+expand_mode = 1
+
+[node name="Slider4" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_w821i")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 2.0944
+pivot_offset = Vector2(175, 175)
+texture = ExtResource("2_jvrgd")
+expand_mode = 1
+
+[node name="Slider5" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_2s4up")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 2.79253
+pivot_offset = Vector2(175, 175)
+texture = ExtResource("2_jvrgd")
+expand_mode = 1
+
+[node name="Slider6" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_wpv0b")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 3.49066
+pivot_offset = Vector2(175, 175)
+texture = ExtResource("2_jvrgd")
+expand_mode = 1
+
+[node name="Slider7" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_delkh")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 4.18879
+pivot_offset = Vector2(175, 175)
+texture = ExtResource("2_jvrgd")
+expand_mode = 1
+
+[node name="Slider8" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_8jidv")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 4.88692
+pivot_offset = Vector2(175, 175)
+texture = ExtResource("2_jvrgd")
+expand_mode = 1
+
+[node name="Slider9" type="TextureRect" parent="."]
+material = SubResource("ShaderMaterial_f5aee")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 5.58505
+pivot_offset = Vector2(175, 175)
+texture = ExtResource("2_jvrgd")
+expand_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_mtj7m")
+expand_mode = 1

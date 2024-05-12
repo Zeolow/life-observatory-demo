@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://cap4isaid42sv"]
+
+[ext_resource type="Script" path="res://scenes/data_viewer.gd" id="1_veiq4"]
+[ext_resource type="Shader" path="res://shaders/data_viewer.gdshader" id="1_xcw0c"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_gj1xm"]
+size = Vector2(22, 22)
+subdivide_width = 54
+subdivide_depth = 54
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_0bikd"]
+render_priority = 0
+shader = ExtResource("1_xcw0c")
+shader_parameter/color_1 = Color(0.670588, 0.670588, 0.670588, 1)
+shader_parameter/color_2 = Color(0.592157, 0.592157, 0.592157, 1)
+shader_parameter/influence = PackedFloat32Array(2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 2.08165e-12, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2.08165e-12)
+
+[sub_resource type="Environment" id="Environment_t7up3"]
+background_mode = 1
+background_color = Color(0.6, 0.6, 0.6, 1)
+
+[node name="DataViewer" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2, 2.08165e-12)
+script = ExtResource("1_veiq4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00488281, -0.00775146, 0.0078125)
+mesh = SubResource("PlaneMesh_gj1xm")
+surface_material_override/0 = SubResource("ShaderMaterial_0bikd")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.726898, 0.686745, 0, -0.686745, 0.726898, 0, 5.86856, 7.88498)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_t7up3")

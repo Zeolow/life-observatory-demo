@@ -1,0 +1,48 @@
+[gd_scene load_steps=6 format=3 uid="uid://cw2yr5rikj8ma"]
+
+[ext_resource type="Shader" path="res://shaders/wireframe.gdshader" id="1_f3ctn"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_2kdyr"]
+radius = 0.4
+height = 0.4
+radial_segments = 12
+rings = 6
+is_hemisphere = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hqox2"]
+albedo_color = Color(0.909804, 0.27451, 0.466667, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_4jlbh"]
+size = Vector3(2, 0.5, 2)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_60kp0"]
+render_priority = 0
+shader = ExtResource("1_f3ctn")
+shader_parameter/color = Color(0.388235, 0.388235, 0.388235, 1)
+
+[node name="VisualBlockDebug" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.999986, 0.00527087, 0, -0.00527087, 0.999986, 0, 0, 0, 1, 0.5, -0.00228575, 0.5)
+mesh = SubResource("SphereMesh_2kdyr")
+surface_material_override/0 = SubResource("StandardMaterial3D_hqox2")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, -0.00228575, -0.5)
+mesh = SubResource("SphereMesh_2kdyr")
+surface_material_override/0 = SubResource("StandardMaterial3D_hqox2")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5, -0.00228575, -0.5)
+mesh = SubResource("SphereMesh_2kdyr")
+surface_material_override/0 = SubResource("StandardMaterial3D_hqox2")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.504786, -0.00228575, 0.5)
+mesh = SubResource("SphereMesh_2kdyr")
+surface_material_override/0 = SubResource("StandardMaterial3D_hqox2")
+
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 0.25, 2.08165e-12)
+mesh = SubResource("BoxMesh_4jlbh")
+surface_material_override/0 = SubResource("ShaderMaterial_60kp0")

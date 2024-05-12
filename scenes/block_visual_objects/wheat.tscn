@@ -1,0 +1,535 @@
+[gd_scene load_steps=15 format=3 uid="uid://bbgbc1dfayph1"]
+
+[ext_resource type="Material" uid="uid://dtdk0d0q8661g" path="res://materials/wheat_bottom.tres" id="1_jk5bq"]
+[ext_resource type="Shader" path="res://shaders/gradient_color_alpha.gdshader" id="2_l2q14"]
+[ext_resource type="Texture2D" uid="uid://dliqxq3c4my80" path="res://scenes/block_visual_objects/wheat_wheat.png" id="2_yvkyg"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xncct"]
+resource_name = "Material.015"
+cull_mode = 2
+shading_mode = 0
+albedo_color = Color(0.647059, 0.576471, 0.403922, 1)
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_88sja"]
+resource_name = "wheat_Plane_025"
+_surfaces = [{
+"aabb": AABB(-1, 0, -1, 2, 1e-05, 2.00001),
+"attribute_data": PackedByteArray(0, 0, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 255, 255, 0, 0),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"material": SubResource("StandardMaterial3D_xncct"),
+"name": "Material.015",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 254, 255, 255, 191, 255, 255, 0, 0, 254, 255, 255, 191, 0, 0, 0, 0, 0, 0, 255, 191, 255, 255, 0, 0, 0, 0, 255, 191, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_q7o4r"]
+_surfaces = [{
+"aabb": AABB(-0.303477, 0.00707328, 0, 0.606963, 0.810417, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(3, 0, 0, 0, 2, 0, 3, 0, 1, 0, 0, 0),
+"name": "Material.009",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(253, 255, 254, 255, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 253, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_ffakk"]
+resource_name = "wheat_Plane_033"
+_surfaces = [{
+"aabb": AABB(-0.303477, 0.00707328, 0, 0.606963, 0.810417, 1e-05),
+"attribute_data": PackedByteArray(55, 116, 86, 11, 0, 0, 86, 11, 55, 116, 255, 255, 0, 0, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(3, 0, 0, 0, 2, 0, 3, 0, 1, 0, 0, 0),
+"material": ExtResource("1_jk5bq"),
+"name": "wheat_bottom",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(253, 255, 254, 255, 0, 0, 255, 127, 0, 0, 254, 255, 0, 0, 255, 127, 253, 255, 0, 0, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_q7o4r")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_i42ft"]
+_surfaces = [{
+"aabb": AABB(-0.303477, 0.00707328, 0, 0.606963, 0.810417, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(3, 0, 0, 0, 2, 0, 3, 0, 1, 0, 0, 0),
+"name": "Material.009",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(253, 255, 254, 255, 0, 0, 0, 0, 0, 0, 254, 255, 0, 0, 0, 0, 253, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_5ikfm"]
+resource_name = "wheat_Plane_070"
+_surfaces = [{
+"aabb": AABB(-0.303477, 0.00707328, 0, 0.606963, 0.810417, 1e-05),
+"attribute_data": PackedByteArray(255, 252, 143, 7, 255, 118, 143, 7, 255, 252, 255, 255, 255, 118, 255, 255),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(3, 0, 0, 0, 2, 0, 3, 0, 1, 0, 0, 0),
+"material": ExtResource("1_jk5bq"),
+"name": "wheat_bottom",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(253, 255, 254, 255, 0, 0, 255, 127, 0, 0, 254, 255, 0, 0, 255, 127, 253, 255, 0, 0, 0, 0, 255, 127, 0, 0, 0, 0, 0, 0, 255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_i42ft")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7drj6"]
+render_priority = 0
+shader = ExtResource("2_l2q14")
+shader_parameter/color_1 = Color(0.556863, 0.490196, 0.333333, 1)
+shader_parameter/color_2 = Color(0.894118, 0.792157, 0.592157, 1)
+shader_parameter/alpha_scissor = 0.4
+shader_parameter/bottom_gradient = false
+shader_parameter/billboard = true
+shader_parameter/tex = ExtResource("2_yvkyg")
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_f40rf"]
+_surfaces = [{
+"aabb": AABB(-0.270371, 0.994711, 0, 0.540743, 0.744392, 1e-05),
+"format": 34896613377,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"name": "Material.006",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 255, 255, 0, 0, 0, 0, 255, 255, 255, 255, 0, 0, 0, 0)
+}]
+blend_shape_mode = 0
+
+[sub_resource type="ArrayMesh" id="ArrayMesh_yo6os"]
+resource_name = "wheat_Plane_017"
+_surfaces = [{
+"aabb": AABB(-0.270371, 0.994711, 0, 0.540743, 0.744392, 1e-05),
+"attribute_data": PackedByteArray(231, 63, 211, 187, 13, 190, 211, 187, 231, 63, 43, 14, 13, 190, 43, 14),
+"format": 34896613399,
+"index_count": 6,
+"index_data": PackedByteArray(0, 0, 3, 0, 1, 0, 0, 0, 2, 0, 3, 0),
+"material": SubResource("ShaderMaterial_7drj6"),
+"name": "wheat_top",
+"primitive": 3,
+"uv_scale": Vector4(0, 0, 0, 0),
+"vertex_count": 4,
+"vertex_data": PackedByteArray(0, 0, 0, 0, 0, 0, 255, 127, 255, 255, 0, 0, 0, 0, 255, 127, 0, 0, 255, 255, 0, 0, 255, 127, 255, 255, 255, 255, 0, 0, 255, 127, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255, 255, 127, 255, 255)
+}]
+blend_shape_mode = 0
+shadow_mesh = SubResource("ArrayMesh_f40rf")
+
+[sub_resource type="QuadMesh" id="QuadMesh_sh8hf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qav40"]
+shading_mode = 0
+albedo_color = Color(0.929412, 0.835294, 0.670588, 1)
+billboard_mode = 3
+particles_anim_h_frames = 1
+particles_anim_v_frames = 1
+particles_anim_loop = false
+
+[node name="Node3D" type="Node3D"]
+
+[node name="wheat" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+
+[node name="Plane_012" type="MeshInstance3D" parent="wheat"]
+mesh = SubResource("ArrayMesh_88sja")
+skeleton = NodePath("")
+
+[node name="Plane_017" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.468401, 0, 0, 0, 0.740289, 0, 0, 0, 0.740289, 0.149524, 0, -0.364553)
+mesh = SubResource("ArrayMesh_ffakk")
+skeleton = NodePath("")
+
+[node name="Plane_018" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.385705, 0, 0, 0, 0.609591, 0, 0, 0, 0.609591, 0.428594, 0, 0.0104468)
+mesh = SubResource("ArrayMesh_ffakk")
+skeleton = NodePath("")
+
+[node name="Plane_019" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.499027, 0, 0, 0, 0.788692, 0, 0, 0, 0.788692, -0.594662, 0, 0.197947)
+mesh = SubResource("ArrayMesh_ffakk")
+skeleton = NodePath("")
+
+[node name="Plane_020" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.413252, 0, 0, 0, 0.653128, 0, 0, 0, 0.653129, 0.661152, 0, 0.260447)
+mesh = SubResource("ArrayMesh_ffakk")
+skeleton = NodePath("")
+
+[node name="Plane_021" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.487808, 0, 0, 0, 0.770962, 0, 0, 0, 0.770962, -0.362104, 0, -0.395803)
+mesh = SubResource("ArrayMesh_ffakk")
+skeleton = NodePath("")
+
+[node name="Plane_022" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.505262, 0, 0, 0, 0.798546, 0, 0, 0, 0.798546, 0.568129, 0, 0.760447)
+mesh = SubResource("ArrayMesh_ffakk")
+skeleton = NodePath("")
+
+[node name="Plane_023" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.421053, 0, 0, 0, 0.665458, 0, 0, 0, 0.665458, 0.464021, 2.38419e-07, -0.818039)
+mesh = SubResource("ArrayMesh_ffakk")
+skeleton = NodePath("")
+
+[node name="Plane_024" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.424056, 0, 0, 0, 0.670204, 0, 0, 0, 0.670204, -0.408615, 0, 0.604197)
+mesh = SubResource("ArrayMesh_ffakk")
+skeleton = NodePath("")
+
+[node name="Plane_056" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.427674, 0, 0, 0, 0.675922, 0, 0, 0, 0.675922, -0.501639, 0, -0.895803)
+mesh = SubResource("ArrayMesh_ffakk")
+skeleton = NodePath("")
+
+[node name="Plane_057" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.478959, 0, 0, 0, 0.756975, 0, 0, 0, 0.756976, -0.083034, 0, -0.0208032)
+mesh = SubResource("ArrayMesh_ffakk")
+skeleton = NodePath("")
+
+[node name="Plane_058" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.505238, 0, 0, 0, 0.798509, 0, 0, 0, 0.798509, -0.799516, 0, -0.145993)
+mesh = SubResource("ArrayMesh_ffakk")
+skeleton = NodePath("")
+
+[node name="Plane_059" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.390013, 0, 0, 0, 0.6164, 0, 0, 0, 0.6164, -0.315592, 0, 0.854197)
+mesh = SubResource("ArrayMesh_ffakk")
+skeleton = NodePath("")
+
+[node name="Plane_060" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.454281, 0, 0, 0, 0.717974, 0, 0, 0, 0.717974, 0.429244, 0, 0.904582)
+mesh = SubResource("ArrayMesh_ffakk")
+skeleton = NodePath("")
+
+[node name="Plane_061" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.469102, 0, 0, 0, 0.741397, 0, 0, 0, 0.741397, 0.823736, 0, -0.794824)
+mesh = SubResource("ArrayMesh_ffakk")
+skeleton = NodePath("")
+
+[node name="Plane_062" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.47386, 0, 0, 0, 0.748917, 0, 0, 0, 0.748917, -0.455127, 0, 0.104197)
+mesh = SubResource("ArrayMesh_ffakk")
+skeleton = NodePath("")
+
+[node name="Plane_063" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.376044, 0, 0, 0, 0.594323, 0, 0, 0, 0.594323, 0.242547, 0, -0.114553)
+mesh = SubResource("ArrayMesh_ffakk")
+skeleton = NodePath("")
+
+[node name="Plane_064" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.465341, 0, 0, 0, 0.735454, 0, 0, 0, 0.735454, 0.475106, 0, 0.510447)
+mesh = SubResource("ArrayMesh_ffakk")
+skeleton = NodePath("")
+
+[node name="Plane_065" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.491468, 0, 0, 0, 0.776746, 0, 0, 0, 0.776746, -0.176057, 0, -0.645803)
+mesh = SubResource("ArrayMesh_ffakk")
+skeleton = NodePath("")
+
+[node name="Plane_066" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.404395, 0, 0, 0, 0.63913, 0, 0, 0, 0.63913, 0.61464, 0, -0.239553)
+mesh = SubResource("ArrayMesh_ffakk")
+skeleton = NodePath("")
+
+[node name="Plane_067" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.432033, 0, 0, 0, 0.682811, 0, 0, 0, 0.682811, 0.521617, 0, -0.489553)
+mesh = SubResource("ArrayMesh_ffakk")
+skeleton = NodePath("")
+
+[node name="Plane_068" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.448886, 0, 0, 0, 0.709447, 0, 0, 0, 0.709447, -0.54815, 0, -0.802053)
+mesh = SubResource("ArrayMesh_ffakk")
+skeleton = NodePath("")
+
+[node name="Plane_069" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.479265, 0, 0, 0, 0.75746, 0, 0, 0, 0.75746, 0.133086, 0, -0.475889)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_070" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.450345, 0, 0, 0, 0.711753, 0, 0, 0, 0.711753, 0.786147, 0, 0.555361)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_071" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.489976, 0, 0, 0, 0.774387, 0, 0, 0, 0.774387, -0.724057, 0, 0.367861)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_072" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.459979, 0, 0, 0, 0.726979, 0, 0, 0, 0.726979, 0.0570804, 0, 0.828732)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_073" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.486053, 0, 0, 0, 0.768187, 0, 0, 0, 0.768187, -0.152628, 0, 0.149111)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_074" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.492156, 0, 0, 0, 0.777833, 0, 0, 0, 0.777833, -0.813091, 0, 0.601335)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_075" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.462707, 0, 0, 0, 0.731291, 0, 0, 0, 0.731291, 0.296352, 0, -0.725889)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_076" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.463757, 0, 0, 0, 0.73295, 0, 0, 0, 0.73295, -0.479159, 0, -0.00713876)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_077" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.465023, 0, 0, 0, 0.73495, 0, 0, 0, 0.73495, 0.377984, 0.00265223, 0.774111)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_078" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.482958, 0, 0, 0, 0.763296, 0, 0, 0, 0.763296, 0.622882, 0, 0.430361)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_079" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.492148, 0, 0, 0, 0.77782, 0, 0, 0, 0.77782, -0.0444226, 0, -0.891449)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_080" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.451852, 0, 0, 0, 0.714134, 0, 0, 0, 0.714134, 0.827862, 0, 0.800818)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_082" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.474328, 0, 0, 0, 0.749656, 0, 0, 0, 0.749656, -0.805689, 0, 0.117861)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_083" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.479511, 0, 0, 0, 0.757848, 0, 0, 0, 0.757848, -0.68324, 0, -0.632139)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_084" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.481175, 0, 0, 0, 0.760477, 0, 0, 0, 0.760477, 0.704515, 0, -0.0696387)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_085" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.446967, 0, 0, 0, 0.706414, 0, 0, 0, 0.706414, 0.814173, 0, -0.507873)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_086" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.478196, 0, 0, 0, 0.755769, 0, 0, 0, 0.755769, 0.255535, 0, 0.274111)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_087" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.487332, 0, 0, 0, 0.77021, 0, 0, 0, 0.77021, -0.0709953, 0, 0.399111)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_088" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.456882, 0, 0, 0, 0.722084, 0, 0, 0, 0.722084, -0.275077, 0, 0.742861)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_089" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.466547, 0, 0, 0, 0.737359, 0, 0, 0, 0.737359, -0.797683, -1.19209e-07, -0.38126)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_090" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.472441, 0, 0, 0, 0.746674, 0, 0, 0, 0.746674, -0.560791, 0, 0.492861)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_091" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.477655, 0, 0, 0, 0.754914, 0, 0, 0, 0.754914, -0.601608, 0, 0.867861)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_092" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.466652, 0, 0, 0, 0.737524, 0, 0, 0, 0.737524, -0.315893, 0, -0.257139)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Plane_093" type="MeshInstance3D" parent="wheat"]
+transform = Transform3D(0.49487, 0, 0, 0, 0.782123, 0, 0, 0, 0.782123, 0.86778, 0, 0.0553612)
+mesh = SubResource("ArrayMesh_5ikfm")
+skeleton = NodePath("")
+
+[node name="Node3D" type="Node3D" parent="wheat"]
+
+[node name="Plane_094" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.469604, 0, 0, 0, 0.469604, 0, 0, 0, 0.469604, -0.0181768, 0, 0.20769)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_095" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.429321, 0, 0, 0, 0.429321, 0, 0, 0, 0.429321, 0.178544, 0, 0.58269)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_096" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.484523, 0, 0, 0, 0.484523, 0, 0, 0, 0.484523, 0.309692, 0, 0.33269)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_097" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.44274, 0, 0, 0, 0.44274, 0, 0, 0, 0.44274, -0.641128, 0, -0.22981)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_098" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.479058, 0, 0, 0, 0.479058, 0, 0, 0, 0.479058, 0.112971, 0, -0.0423099)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_099" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.48756, 0, 0, 0, 0.48756, 0, 0, 0, 0.48756, 0.276905, 0, -0.66731)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_115" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.44654, 0, 0, 0, 0.44654, 0, 0, 0, 0.44654, 0.768708, 0, 0.11394)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_117" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.448003, 0, 0, 0, 0.448003, 0, 0, 0, 0.448003, -0.50998, 0, -0.47981)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_118" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.449765, 0, 0, 0, 0.449765, 0, 0, 0, 0.449765, 0.834282, 0, 0.36394)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_119" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.474747, 0, 0, 0, 0.474747, 0, 0, 0, 0.474747, -0.84877, 0, -0.0565058)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_120" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.487548, 0, 0, 0, 0.487548, 0, 0, 0, 0.487548, -0.280472, 0, 0.14519)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_121" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.431419, 0, 0, 0, 0.431419, 0, 0, 0, 0.431419, 0.44084, 0, 0.73894)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_122" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.462726, 0, 0, 0, 0.462726, 0, 0, 0, 0.462726, -0.575554, 0, -0.72981)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_123" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.469946, 0, 0, 0, 0.469946, 0, 0, 0, 0.469946, -0.228821, 1.19209e-07, -0.668798)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_124" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.472263, 0, 0, 0, 0.472263, 0, 0, 0, 0.472263, -0.564622, 2.40259e-16, 0.808297)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_125" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.424615, 0, 0, 0, 0.424615, 0, 0, 0, 0.424615, -0.11503, 0, -0.813483)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_126" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.468114, 0, 0, 0, 0.468114, 0, 0, 0, 0.468114, 0.762549, 0, -0.344962)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_127" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.480841, 0, 0, 0, 0.480841, 0, 0, 0, 0.480841, 0.5392, 0, -0.51106)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_130" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.460098, 0, 0, 0, 0.460098, 0, 0, 0, 0.460098, 0.721925, 0, 0.62498)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_132" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.452034, 0, 0, 0, 0.452034, 0, 0, 0, 0.452034, -0.214898, 0, 0.39519)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_133" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.491341, 0, 0, 0, 0.491341, 0, 0, 0, 0.491341, -0.149324, 0, -0.10481)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_134" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.448297, 0, 0, 0, 0.448297, 0, 0, 0, 0.448297, -0.378833, 0, -0.35481)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_135" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.443122, 0, 0, 0, 0.443122, 0, 0, 0, 0.443122, 0.0662882, -1.19209e-07, 0.83598)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_136" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.448498, 0, 0, 0, 0.448498, 0, 0, 0, 0.448498, -0.399306, 0, 0.550793)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_137" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.426481, 0, 0, 0, 0.426481, 0, 0, 0, 0.426481, 0.473626, 0, -0.76106)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_138" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.435427, 0, 0, 0, 0.435427, 0, 0, 0, 0.435427, -0.688472, 1.19209e-07, 0.36696)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_139" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.46332, 0, 0, 0, 0.46332, 0, 0, 0, 0.46332, -0.411619, 0, 0.0201901)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_128" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.438425, 0, 0, 0, 0.438425, 0, 0, 0, 0.438425, 0.408053, 0, -0.26106)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_129" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.451889, 0, 0, 0, 0.451889, 0, 0, 0, 0.451889, 0.244118, 0, 0.0826901)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="Plane_131" type="MeshInstance3D" parent="wheat/Node3D"]
+transform = Transform3D(0.46736, 0, 0, 0, 0.46736, 0, 0, 0, 0.46736, 0.375266, 0, -0.16731)
+mesh = SubResource("ArrayMesh_yo6os")
+skeleton = NodePath("")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("QuadMesh_sh8hf")
+surface_material_override/0 = SubResource("StandardMaterial3D_qav40")

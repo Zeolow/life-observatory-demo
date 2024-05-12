@@ -1,0 +1,965 @@
+[gd_scene load_steps=84 format=3 uid="uid://d0tqbuqafdv5c"]
+
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_mnbsr"]
+[ext_resource type="Script" path="res://scripts/block_data.gd" id="2_clkc4"]
+[ext_resource type="Shader" path="res://shaders/wireframe.gdshader" id="2_qbd8v"]
+[ext_resource type="PackedScene" uid="uid://bbgbc1dfayph1" path="res://scenes/block_visual_objects/wheat.tscn" id="3_61vum"]
+[ext_resource type="PackedScene" uid="uid://dpcxuabhn64oq" path="res://scenes/block_visual_objects/debug/visual_block_debug.tscn" id="3_ogmf1"]
+[ext_resource type="Script" path="res://scripts/camera_controller.gd" id="3_t7h0a"]
+[ext_resource type="PackedScene" uid="uid://b30oqkueegn3h" path="res://scenes/block_visual_objects/sheep.tscn" id="4_4xbyc"]
+[ext_resource type="PackedScene" uid="uid://deekrcw2wmq6u" path="res://scenes/block_visual_objects/bladderwack.tscn" id="5_j8560"]
+[ext_resource type="Theme" uid="uid://eoe80241yhsq" path="res://themes/main.tres" id="5_pfxss"]
+[ext_resource type="PackedScene" uid="uid://7gm8aingsig6" path="res://scenes/block_visual_objects/debug/d_4.tscn" id="6_1mb0k"]
+[ext_resource type="Texture2D" uid="uid://dvihjiv6di2x4" path="res://textures/kelp_farm1_adjusted.png" id="6_vi6c8"]
+[ext_resource type="Script" path="res://scripts/hud.gd" id="6_yxmdl"]
+[ext_resource type="PackedScene" uid="uid://bsh1bucaxsw5v" path="res://scenes/block_visual_objects/debug/d_5.tscn" id="7_xuohd"]
+[ext_resource type="PackedScene" uid="uid://cstc8qu148pcq" path="res://scenes/data_box.tscn" id="7_yls48"]
+[ext_resource type="PackedScene" uid="uid://2x278jvqoxhj" path="res://scenes/block_visual_objects/debug/d_6.tscn" id="8_8thf6"]
+[ext_resource type="Script" path="res://scripts/info_panel.gd" id="8_qugtc"]
+[ext_resource type="PackedScene" uid="uid://ku0ysqef1wrb" path="res://scenes/block_visual_objects/debug/d_7.tscn" id="9_da2w8"]
+[ext_resource type="PackedScene" uid="uid://defj8d2qr6gvf" path="res://scenes/block_visual_objects/debug/d_8.tscn" id="10_uajxr"]
+[ext_resource type="PackedScene" uid="uid://devvgky2qa8nk" path="res://scenes/block_visual_objects/debug/d_9.tscn" id="11_d4yw2"]
+[ext_resource type="Script" path="res://scripts/toggle_menu.gd" id="11_sy8v8"]
+[ext_resource type="Script" path="res://scripts/toggle_button.gd" id="12_e6m5c"]
+[ext_resource type="PackedScene" uid="uid://buf10jy7vej3o" path="res://scenes/block_visual_objects/debug/d_10.tscn" id="12_kerxu"]
+[ext_resource type="PackedScene" uid="uid://bnw6xy84gqmfe" path="res://scenes/block_visual_objects/debug/d_12.tscn" id="14_x5pbq"]
+[ext_resource type="PackedScene" uid="uid://cap4isaid42sv" path="res://scenes/data_viewer.tscn" id="15_0r8f1"]
+[ext_resource type="PackedScene" uid="uid://botu8t5q3l0b6" path="res://scenes/block_visual_objects/debug/d_2-1.tscn" id="15_e3aud"]
+[ext_resource type="PackedScene" uid="uid://t380o1ronshb" path="res://scenes/block_visual_objects/debug/d_3-1.tscn" id="16_sutyt"]
+[ext_resource type="PackedScene" uid="uid://kxau43o3uib5" path="res://scenes/block_visual_objects/debug/d_4-1.tscn" id="17_5uep4"]
+[ext_resource type="PackedScene" uid="uid://tlcwu36o323g" path="res://scenes/block_visual_objects/debug/d_5-1.tscn" id="18_f5fxx"]
+[ext_resource type="PackedScene" uid="uid://o6chxto5g0et" path="res://scenes/block_visual_objects/debug/d_6-1.tscn" id="19_n27om"]
+[ext_resource type="PackedScene" uid="uid://cw2yr5rikj8ma" path="res://scenes/block_visual_objects/debug/d_7-1.tscn" id="20_mclaq"]
+[ext_resource type="PackedScene" uid="uid://c483ejscu0pfc" path="res://scenes/block_visual_objects/debug/d_8-1.tscn" id="21_lquvy"]
+[ext_resource type="PackedScene" uid="uid://be6lmvv3hysu0" path="res://scenes/block_visual_objects/debug/d_9-1.tscn" id="22_72sng"]
+[ext_resource type="PackedScene" uid="uid://1xpg7p0ohlih" path="res://scenes/block_visual_objects/debug/d_10-1.tscn" id="23_r767e"]
+[ext_resource type="PackedScene" uid="uid://crih60bg7hdjh" path="res://scenes/block_visual_objects/debug/d_11-1.tscn" id="24_rlqwk"]
+[ext_resource type="PackedScene" uid="uid://db8kswd80vnx4" path="res://scenes/block_visual_objects/debug/d_12-2.tscn" id="25_axy76"]
+[ext_resource type="PackedScene" uid="uid://bxrg2ung16kvb" path="res://scenes/block_visual_objects/pines.tscn" id="26_7y5dg"]
+[ext_resource type="PackedScene" uid="uid://dkt4njv265pvj" path="res://scenes/boundary_sliders.tscn" id="35_uf8yc"]
+[ext_resource type="PackedScene" uid="uid://ckuv547i2xmfu" path="res://scenes/globe_map.tscn" id="36_27sle"]
+[ext_resource type="Script" path="res://scenes/GlobeLineGenerator.gd" id="39_dj5rt"]
+
+[sub_resource type="Resource" id="Resource_57ygg"]
+script = ExtResource("2_clkc4")
+item = "Wheat (flour)"
+visual_object = ExtResource("3_61vum")
+co2 = 0.4
+kg_per_m2 = 0.47
+possible_origins = Array[String]([])
+color = Color(0.901961, 0.807843, 0.619608, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_6a5y6"]
+script = ExtResource("2_clkc4")
+item = "Lamb"
+visual_object = ExtResource("4_4xbyc")
+co2 = 17.0
+kg_per_m2 = 0.003
+possible_origins = Array[String]([])
+color = Color(0.827451, 0.85098, 0.568627, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_15umv"]
+script = ExtResource("2_clkc4")
+item = "Honey"
+visual_object = ExtResource("4_4xbyc")
+co2 = 2.18
+kg_per_m2 = 5.0
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_nfukf"]
+script = ExtResource("2_clkc4")
+item = "Seagrass"
+visual_object = ExtResource("5_j8560")
+co2 = -2.0
+kg_per_m2 = 2.0
+possible_origins = Array[String]([])
+color = Color(0.631373, 0.54902, 0.478431, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_rd7xh"]
+script = ExtResource("2_clkc4")
+item = "Vegetable oil"
+visual_object = ExtResource("6_1mb0k")
+co2 = 1.4
+kg_per_m2 = 0.012
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_kakqx"]
+script = ExtResource("2_clkc4")
+item = "Oats"
+visual_object = ExtResource("7_xuohd")
+co2 = 0.5
+kg_per_m2 = 0.29
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_cjydc"]
+script = ExtResource("2_clkc4")
+item = "Beans"
+visual_object = ExtResource("8_8thf6")
+co2 = 0.4
+kg_per_m2 = 0.13
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_atueb"]
+script = ExtResource("2_clkc4")
+item = "Potato"
+visual_object = ExtResource("9_da2w8")
+co2 = 0.2
+kg_per_m2 = 0.21
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_rrfby"]
+script = ExtResource("2_clkc4")
+item = "Egg"
+visual_object = ExtResource("10_uajxr")
+co2 = 1.2
+kg_per_m2 = 0.135
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_6g0bs"]
+script = ExtResource("2_clkc4")
+item = "Beef"
+visual_object = ExtResource("11_d4yw2")
+co2 = 23.0
+kg_per_m2 = 0.003
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_4p2vi"]
+script = ExtResource("2_clkc4")
+item = "Pork"
+visual_object = ExtResource("12_kerxu")
+co2 = 3.0
+kg_per_m2 = 0.052
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_uc8d8"]
+script = ExtResource("2_clkc4")
+item = "Cheese"
+visual_object = ExtResource("14_x5pbq")
+co2 = 5.3
+kg_per_m2 = 0.011
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_4la16"]
+script = ExtResource("2_clkc4")
+item = "Dark chocolate"
+visual_object = ExtResource("15_e3aud")
+co2 = 19.0
+kg_per_m2 = 0.015
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_8sc32"]
+script = ExtResource("2_clkc4")
+item = "Coffee (beans)"
+visual_object = ExtResource("16_sutyt")
+co2 = 10.1
+kg_per_m2 = 0.046
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_nm8h2"]
+script = ExtResource("2_clkc4")
+item = "Nuts (fat)"
+visual_object = ExtResource("17_5uep4")
+co2 = 2.6
+kg_per_m2 = 0.077
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_t4rg0"]
+script = ExtResource("2_clkc4")
+item = "Fish (farmed)"
+visual_object = ExtResource("18_f5fxx")
+co2 = 5.0
+kg_per_m2 = 0.119
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_1cv0j"]
+script = ExtResource("2_clkc4")
+item = "Banana"
+visual_object = ExtResource("19_n27om")
+co2 = 0.7
+kg_per_m2 = 0.51
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_jvxdg"]
+script = ExtResource("2_clkc4")
+item = "Potato"
+visual_object = ExtResource("20_mclaq")
+co2 = 0.5
+kg_per_m2 = 1.136
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_gtcsk"]
+script = ExtResource("2_clkc4")
+item = "Citrus fruit"
+visual_object = ExtResource("21_lquvy")
+co2 = 0.3
+kg_per_m2 = 1.163
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_mrifn"]
+script = ExtResource("2_clkc4")
+item = "tomato"
+visual_object = ExtResource("22_72sng")
+co2 = 1.4
+kg_per_m2 = 1.25
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_l7qrj"]
+script = ExtResource("2_clkc4")
+item = "Apple"
+visual_object = ExtResource("23_r767e")
+co2 = 0.06
+kg_per_m2 = 10.0
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_0phld"]
+script = ExtResource("2_clkc4")
+item = "Sugar"
+visual_object = ExtResource("24_rlqwk")
+co2 = 0.6
+kg_per_m2 = 1.1
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_8hag1"]
+script = ExtResource("2_clkc4")
+item = "Rrice"
+visual_object = ExtResource("25_axy76")
+co2 = 2.0
+kg_per_m2 = 1.0
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_33u11"]
+script = ExtResource("2_clkc4")
+item = "Spirulina (open pond)"
+visual_object = ExtResource("3_ogmf1")
+co2 = 0.0
+kg_per_m2 = 2.2
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_01uhq"]
+script = ExtResource("2_clkc4")
+item = "Spirulina (bio reactor iceland)"
+visual_object = ExtResource("3_ogmf1")
+co2 = 0.0
+kg_per_m2 = 10.0
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 0
+
+[sub_resource type="Resource" id="Resource_ftbnr"]
+script = ExtResource("2_clkc4")
+item = "Boreal forest"
+visual_object = ExtResource("26_7y5dg")
+co2 = 2.08165e-12
+kg_per_m2 = 0.0
+possible_origins = Array[String]([])
+color = Color(0, 0, 0, 1)
+type = 1
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_siemn"]
+size = Vector2(22, 22)
+subdivide_width = 10
+subdivide_depth = 10
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_tn8l1"]
+render_priority = 0
+shader = ExtResource("2_qbd8v")
+shader_parameter/color = Color(0.890196, 0.890196, 0.890196, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_8exaf"]
+size = Vector2(10, 10)
+subdivide_width = 4
+subdivide_depth = 4
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_kp2o6"]
+plane = Plane(2.08165e-12, 1, 2.08165e-12, 2.08165e-12)
+
+[sub_resource type="Environment" id="Environment_somvq"]
+background_mode = 1
+background_color = Color(0.890196, 0.890196, 0.890196, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_q4ayi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_1s7ma"]
+render_priority = 0
+shader = ExtResource("2_qbd8v")
+shader_parameter/color = Color(0.521569, 0.521569, 0.521569, 1)
+
+[sub_resource type="SphereMesh" id="SphereMesh_hupke"]
+radius = 0.1
+height = 0.2
+radial_segments = 6
+rings = 3
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_nowiv"]
+albedo_color = Color(0.466667, 0.321569, 1, 1)
+
+[sub_resource type="Animation" id="Animation_mq8i0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CameraParent:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_r5flx"]
+resource_name = "rotate"
+length = 60.0
+loop_mode = 1
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CameraParent:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 60),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(3.48787e-16, 6.28319, 3.48787e-16)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pdy5a"]
+_data = {
+"RESET": SubResource("Animation_mq8i0"),
+"rotate": SubResource("Animation_r5flx")
+}
+
+[sub_resource type="Animation" id="Animation_cwnrx"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D/BigGrid:surface_material_override/0:shader_parameter/color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.890196, 0.890196, 0.890196, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaticBody3D/BigGrid:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CameraParent:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(3.48787e-16, 0.785398, 3.48787e-16)]
+}
+
+[sub_resource type="Animation" id="Animation_qbdg5"]
+resource_name = "fade_in_grid"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D/BigGrid:surface_material_override/0:shader_parameter/color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.890196, 0.890196, 0.890196, 1), Color(0.745098, 0.745098, 0.745098, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaticBody3D/BigGrid:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_7v3ru"]
+resource_name = "fade_out_grid"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("StaticBody3D/BigGrid:surface_material_override/0:shader_parameter/color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.745098, 0.745098, 0.745098, 1), Color(0.890196, 0.890196, 0.890196, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("StaticBody3D/BigGrid:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_x76kn"]
+resource_name = "rotate_camera"
+length = 10.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CameraParent:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 10),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(3.48787e-16, -6.28319, 3.48787e-16), Vector3(3.48787e-16, 3.48787e-16, 3.48787e-16)]
+}
+
+[sub_resource type="Animation" id="Animation_aj8ur"]
+resource_name = "rotate_display"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4e5as"]
+_data = {
+"RESET": SubResource("Animation_cwnrx"),
+"fade_in_grid": SubResource("Animation_qbdg5"),
+"fade_out_grid": SubResource("Animation_7v3ru"),
+"rotate_camera": SubResource("Animation_x76kn"),
+"rotate_display": SubResource("Animation_aj8ur")
+}
+
+[node name="Main" type="Node3D"]
+script = ExtResource("1_mnbsr")
+block_data = Array[ExtResource("2_clkc4")]([SubResource("Resource_57ygg"), SubResource("Resource_6a5y6"), SubResource("Resource_15umv"), SubResource("Resource_nfukf"), SubResource("Resource_rd7xh"), SubResource("Resource_kakqx"), SubResource("Resource_cjydc"), SubResource("Resource_atueb"), SubResource("Resource_rrfby"), SubResource("Resource_6g0bs"), SubResource("Resource_4p2vi"), SubResource("Resource_uc8d8"), SubResource("Resource_4la16"), SubResource("Resource_8sc32"), SubResource("Resource_nm8h2"), SubResource("Resource_t4rg0"), SubResource("Resource_1cv0j"), SubResource("Resource_jvxdg"), SubResource("Resource_gtcsk"), SubResource("Resource_mrifn"), SubResource("Resource_l7qrj"), SubResource("Resource_0phld"), SubResource("Resource_8hag1"), SubResource("Resource_33u11"), SubResource("Resource_01uhq"), SubResource("Resource_ftbnr")])
+metadata/_edit_vertical_guides_ = [31.0]
+metadata/_edit_horizontal_guides_ = [32.0]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="BigGrid" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("PlaneMesh_siemn")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_tn8l1")
+
+[node name="SmallGrid" type="MeshInstance3D" parent="StaticBody3D"]
+visible = false
+mesh = SubResource("PlaneMesh_8exaf")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("ShaderMaterial_tn8l1")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+shape = SubResource("WorldBoundaryShape3D_kp2o6")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_somvq")
+
+[node name="Blocks" type="Node3D" parent="."]
+
+[node name="grid_marker" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.00179154, 0)
+mesh = SubResource("PlaneMesh_q4ayi")
+surface_material_override/0 = SubResource("ShaderMaterial_1s7ma")
+
+[node name="debug_sphere" type="MeshInstance3D" parent="."]
+visible = false
+mesh = SubResource("SphereMesh_hupke")
+surface_material_override/0 = SubResource("StandardMaterial3D_nowiv")
+
+[node name="CameraParent" type="Node3D" parent="."]
+transform = Transform3D(0.707107, -8.06184e-23, 0.707107, 3.48787e-16, 1, -3.48787e-16, -0.707107, 4.93259e-16, 0.707107, 0, 0, 0)
+script = ExtResource("3_t7h0a")
+
+[node name="Camera3D" type="Camera3D" parent="CameraParent"]
+transform = Transform3D(1, -5.01685e-16, 3.13487e-16, 3.13488e-16, 0.898794, 0.438371, -5.01685e-16, -0.438371, 0.898794, 2.08165e-12, 19.1749, 37.478)
+projection = 1
+size = 5.0
+near = 0.025
+
+[node name="CameraAnimator" type="AnimationPlayer" parent="CameraParent"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_pdy5a")
+}
+
+[node name="HUD" type="Control" parent="."]
+visible = false
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("5_pfxss")
+script = ExtResource("6_yxmdl")
+
+[node name="BoundarySliders" parent="HUD" instance=ExtResource("35_uf8yc")]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.0
+offset_left = -177.0
+offset_top = 55.0
+offset_right = 173.0
+offset_bottom = 405.0
+grow_vertical = 1
+
+[node name="LeftPanel" type="MarginContainer" parent="HUD"]
+custom_minimum_size = Vector2(300, 2.08165e-12)
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/LeftPanel"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HUD/LeftPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Items"
+
+[node name="DisplayMode2" type="HBoxContainer" parent="HUD/LeftPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+script = ExtResource("11_sy8v8")
+
+[node name="Day" type="Button" parent="HUD/LeftPanel/VBoxContainer/DisplayMode2"]
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+text = "food"
+script = ExtResource("12_e6m5c")
+
+[node name="Week" type="Button" parent="HUD/LeftPanel/VBoxContainer/DisplayMode2"]
+layout_mode = 2
+text = "energy
+"
+script = ExtResource("12_e6m5c")
+
+[node name="Week2" type="Button" parent="HUD/LeftPanel/VBoxContainer/DisplayMode2"]
+layout_mode = 2
+text = "housing
+"
+script = ExtResource("12_e6m5c")
+
+[node name="DisplayMode3" type="HBoxContainer" parent="HUD/LeftPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+script = ExtResource("11_sy8v8")
+
+[node name="Week2" type="Button" parent="HUD/LeftPanel/VBoxContainer/DisplayMode3"]
+layout_mode = 2
+text = "housing
+"
+script = ExtResource("12_e6m5c")
+
+[node name="Week3" type="Button" parent="HUD/LeftPanel/VBoxContainer/DisplayMode3"]
+layout_mode = 2
+text = "restoration
+"
+script = ExtResource("12_e6m5c")
+
+[node name="Search2" type="Label" parent="HUD/LeftPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Search" type="Label" parent="HUD/LeftPanel/VBoxContainer"]
+layout_mode = 2
+text = "Search"
+
+[node name="SearchBar" type="LineEdit" parent="HUD/LeftPanel/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.101961, 0.101961, 0.101961, 1)
+theme_override_colors/font_placeholder_color = Color(0.811765, 0.811765, 0.811765, 1)
+placeholder_text = "_"
+
+[node name="Separator" type="Label" parent="HUD/LeftPanel/VBoxContainer"]
+layout_mode = 2
+text = "--------------------------------"
+
+[node name="FoodItems" type="ScrollContainer" parent="HUD/LeftPanel/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/LeftPanel/VBoxContainer/FoodItems"]
+layout_mode = 2
+script = ExtResource("11_sy8v8")
+
+[node name="InfoPanel" type="VBoxContainer" parent="HUD/LeftPanel/VBoxContainer"]
+layout_mode = 2
+script = ExtResource("8_qugtc")
+
+[node name="Separator" type="Label" parent="HUD/LeftPanel/VBoxContainer/InfoPanel"]
+layout_mode = 2
+text = "--------------------------------"
+
+[node name="Info" type="Label" parent="HUD/LeftPanel/VBoxContainer/InfoPanel"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Info"
+
+[node name="TextureRect" type="TextureRect" parent="HUD/LeftPanel/VBoxContainer/InfoPanel"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("6_vi6c8")
+expand_mode = 5
+
+[node name="Item" type="Label" parent="HUD/LeftPanel/VBoxContainer/InfoPanel"]
+layout_mode = 2
+text = "FOOD ITEM 1"
+
+[node name="Origin" type="HBoxContainer" parent="HUD/LeftPanel/VBoxContainer/InfoPanel"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HUD/LeftPanel/VBoxContainer/InfoPanel/Origin"]
+layout_mode = 2
+text = "Origin: "
+
+[node name="OptionButton" type="OptionButton" parent="HUD/LeftPanel/VBoxContainer/InfoPanel/Origin"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.101961, 0.101961, 0.101961, 1)
+item_count = 3
+selected = 0
+popup/item_0/text = "SWEDEN"
+popup/item_0/id = 0
+popup/item_1/text = "SPAIN"
+popup/item_1/id = 1
+popup/item_2/text = "BRAZIL"
+popup/item_2/id = 2
+
+[node name="Method" type="HBoxContainer" parent="HUD/LeftPanel/VBoxContainer/InfoPanel"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HUD/LeftPanel/VBoxContainer/InfoPanel/Method"]
+layout_mode = 2
+text = "Production method:"
+
+[node name="OptionButton" type="OptionButton" parent="HUD/LeftPanel/VBoxContainer/InfoPanel/Method"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.101961, 0.101961, 0.101961, 1)
+item_count = 3
+selected = 0
+popup/item_0/text = "ORGANIC"
+popup/item_0/id = 0
+popup/item_1/text = "HYDROPONIC"
+popup/item_1/id = 1
+popup/item_2/text = "REGENERATIVE"
+popup/item_2/id = 2
+
+[node name="Amount" parent="HUD/LeftPanel/VBoxContainer/InfoPanel" instance=ExtResource("7_yls48")]
+layout_mode = 2
+text = "Amount per tile"
+
+[node name="Co2" parent="HUD/LeftPanel/VBoxContainer/InfoPanel" instance=ExtResource("7_yls48")]
+layout_mode = 2
+text = "CO2/kg"
+
+[node name="ReadMore" type="Label" parent="HUD/LeftPanel/VBoxContainer/InfoPanel"]
+layout_mode = 2
+
+[node name="ReadMore2" type="Label" parent="HUD/LeftPanel/VBoxContainer/InfoPanel"]
+layout_mode = 2
+text = "read more (...)"
+
+[node name="RightPanel" type="MarginContainer" parent="HUD"]
+layout_mode = 1
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -404.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 32
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HUD/RightPanel"]
+custom_minimum_size = Vector2(2.08165e-12, 2.08165e-12)
+layout_mode = 2
+
+[node name="CO2" parent="HUD/RightPanel/VBoxContainer" instance=ExtResource("7_yls48")]
+visible = false
+layout_mode = 2
+text = "CO2"
+
+[node name="LandUse" parent="HUD/RightPanel/VBoxContainer" instance=ExtResource("7_yls48")]
+visible = false
+layout_mode = 2
+text = "LAND USE"
+unit = "%"
+
+[node name="Separator" type="Label" parent="HUD/RightPanel/VBoxContainer"]
+visible = false
+layout_mode = 2
+text = "--------------------------------"
+
+[node name="Label" type="Label" parent="HUD/RightPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Inventory"
+
+[node name="DisplayMode" type="HBoxContainer" parent="HUD/RightPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+script = ExtResource("11_sy8v8")
+
+[node name="Day" type="Button" parent="HUD/RightPanel/VBoxContainer/DisplayMode"]
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+text = "day"
+script = ExtResource("12_e6m5c")
+
+[node name="Week" type="Button" parent="HUD/RightPanel/VBoxContainer/DisplayMode"]
+layout_mode = 2
+text = "week
+"
+script = ExtResource("12_e6m5c")
+
+[node name="Month" type="Button" parent="HUD/RightPanel/VBoxContainer/DisplayMode"]
+layout_mode = 2
+text = "month
+"
+script = ExtResource("12_e6m5c")
+
+[node name="Year" type="Button" parent="HUD/RightPanel/VBoxContainer/DisplayMode"]
+layout_mode = 2
+text = "year
+"
+script = ExtResource("12_e6m5c")
+
+[node name="FoodItemOutput" type="VBoxContainer" parent="HUD/RightPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="ReadMore2" type="Label" parent="HUD/RightPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="Nutrients2" type="Label" parent="HUD/RightPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Nutrients"
+
+[node name="Label2" type="Label" parent="HUD/RightPanel/VBoxContainer/Nutrients2"]
+layout_mode = 2
+offset_right = 392.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 64
+text = "Nutrients"
+
+[node name="DisplayMode2" type="HBoxContainer" parent="HUD/RightPanel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 12
+script = ExtResource("11_sy8v8")
+
+[node name="Day" type="Button" parent="HUD/RightPanel/VBoxContainer/DisplayMode2"]
+layout_mode = 2
+toggle_mode = true
+button_pressed = true
+text = "% of recommended"
+script = ExtResource("12_e6m5c")
+
+[node name="Week" type="Button" parent="HUD/RightPanel/VBoxContainer/DisplayMode2"]
+layout_mode = 2
+text = "amount
+"
+script = ExtResource("12_e6m5c")
+
+[node name="Nutrients" type="VBoxContainer" parent="HUD/RightPanel/VBoxContainer"]
+layout_mode = 2
+
+[node name="LandUse" parent="HUD/RightPanel/VBoxContainer/Nutrients" instance=ExtResource("7_yls48")]
+layout_mode = 2
+text = "Protein"
+unit = "%"
+
+[node name="LandUse2" parent="HUD/RightPanel/VBoxContainer/Nutrients" instance=ExtResource("7_yls48")]
+layout_mode = 2
+text = "Carbohydrates"
+unit = "%"
+
+[node name="LandUse3" parent="HUD/RightPanel/VBoxContainer/Nutrients" instance=ExtResource("7_yls48")]
+layout_mode = 2
+text = "Fat"
+unit = "%"
+
+[node name="LandUse4" parent="HUD/RightPanel/VBoxContainer/Nutrients" instance=ExtResource("7_yls48")]
+layout_mode = 2
+text = "Fiber"
+unit = "%"
+
+[node name="LandUse5" parent="HUD/RightPanel/VBoxContainer/Nutrients" instance=ExtResource("7_yls48")]
+layout_mode = 2
+text = "Vitamins"
+unit = "%"
+
+[node name="LandUse6" parent="HUD/RightPanel/VBoxContainer/Nutrients" instance=ExtResource("7_yls48")]
+layout_mode = 2
+text = "Minerals"
+unit = "%"
+
+[node name="ReadMore2" type="Label" parent="HUD/RightPanel/VBoxContainer/Nutrients"]
+layout_mode = 2
+
+[node name="ReadMore3" type="Label" parent="HUD/RightPanel/VBoxContainer/Nutrients"]
+layout_mode = 2
+text = "detailed view (...)"
+
+[node name="ReadMore4" type="Label" parent="HUD/RightPanel/VBoxContainer/Nutrients"]
+layout_mode = 2
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="HUD/RightPanel"]
+visible = false
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="GridSize" type="HBoxContainer" parent="HUD/RightPanel/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="Label" type="Label" parent="HUD/RightPanel/VBoxContainer2/GridSize"]
+layout_mode = 2
+text = "FULL AREA"
+
+[node name="GridSize" type="CheckButton" parent="HUD/RightPanel/VBoxContainer2/GridSize"]
+layout_mode = 2
+
+[node name="DataViewer" type="HBoxContainer" parent="HUD/RightPanel/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="Label" type="Label" parent="HUD/RightPanel/VBoxContainer2/DataViewer"]
+layout_mode = 2
+text = "DATA VIEWER"
+
+[node name="DataViewer" type="CheckButton" parent="HUD/RightPanel/VBoxContainer2/DataViewer"]
+layout_mode = 2
+
+[node name="GlobeView" type="HBoxContainer" parent="HUD/RightPanel/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+
+[node name="Label" type="Label" parent="HUD/RightPanel/VBoxContainer2/GlobeView"]
+layout_mode = 2
+text = "GLOBE VIEW"
+
+[node name="GlobeView" type="CheckButton" parent="HUD/RightPanel/VBoxContainer2/GlobeView"]
+layout_mode = 2
+
+[node name="DataViewer" parent="." instance=ExtResource("15_0r8f1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.08165e-12, 2.08165e-12, 2.08165e-12)
+visible = false
+
+[node name="GlobeMap" parent="." instance=ExtResource("36_27sle")]
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_4e5as")
+}
+
+[node name="GlobeLineGenerator" type="Node3D" parent="."]
+visible = false
+script = ExtResource("39_dj5rt")
+
+[connection signal="food_item_selected" from="HUD" to="." method="_on_hud_food_item_selected"]
+[connection signal="mouse_entered" from="HUD/LeftPanel" to="." method="_on_panel_mouse_entered"]
+[connection signal="mouse_exited" from="HUD/LeftPanel" to="." method="_on_panel_mouse_exited"]
+[connection signal="mouse_entered" from="HUD/RightPanel" to="." method="_on_panel_mouse_entered"]
+[connection signal="mouse_exited" from="HUD/RightPanel" to="." method="_on_panel_mouse_exited"]
+[connection signal="toggle_on" from="HUD/RightPanel/VBoxContainer/DisplayMode/Day" to="HUD" method="_on_food_display_mode_toggle_on"]
+[connection signal="toggle_on" from="HUD/RightPanel/VBoxContainer/DisplayMode/Week" to="HUD" method="_on_food_display_mode_toggle_on"]
+[connection signal="toggle_on" from="HUD/RightPanel/VBoxContainer/DisplayMode/Month" to="HUD" method="_on_food_display_mode_toggle_on"]
+[connection signal="toggle_on" from="HUD/RightPanel/VBoxContainer/DisplayMode/Year" to="HUD" method="_on_food_display_mode_toggle_on"]
+[connection signal="toggled" from="HUD/RightPanel/VBoxContainer2/GridSize/GridSize" to="." method="_on_grid_size_toggled"]
+[connection signal="toggled" from="HUD/RightPanel/VBoxContainer2/DataViewer/DataViewer" to="." method="_on_data_viewer_toggled"]
+[connection signal="toggled" from="HUD/RightPanel/VBoxContainer2/GlobeView/GlobeView" to="." method="_on_globe_view_toggled"]

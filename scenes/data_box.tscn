@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cstc8qu148pcq"]
+
+[ext_resource type="Script" path="res://scripts/data_box.gd" id="1_yje6n"]
+
+[node name="DataBox" type="HBoxContainer"]
+script = ExtResource("1_yje6n")
+
+[node name="Text" type="Label" parent="."]
+layout_mode = 2
+text = "CO2/kg (kg): "
+
+[node name="Data" type="Label" parent="."]
+layout_mode = 2
+text = "10"
